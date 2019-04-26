@@ -1,40 +1,86 @@
+/* type slectors */
+
 body{
     color: #878787;
     margin: 0;
-}
-
-.main-header {
-    background-color: orange;
+    font-size: 1em; /* 16px default */
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 5.625em;
     color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
 }
 
 h2 {
-    font-size: 53px;
+    font-size: 3.3125em;
+    text-decoration: underline;
+    font-weight: normal;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 1.25em;
     color: #48525c;
 }
 
-.primary-content {
-    text-align:center;
+ol li {
+    margin-bottom: 5px;
+}
+/* id slectors */
+#main-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: solid 10px #ffa949;
+}
+/* class slectors */
+.main-header {
+    background-color: #ffa949;
 }
 
-.secondary-content {
+.title {
+    color: white;
+    font-size: 1.625em; /* 26px/16px(parent element) = 1.625em */ 
+}
 
+.primary-content, 
+.secondary-content {
+    width: 60%;
+}
+
+
+
+.primary-content, .main-header {
+    text-align:center;
 }
 
 .t-border {
     border-top: 2px solid lightgrey;
 }
 
-#main-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    border-bottom: solid 10px orange;
+/* psuedo class slectors */
+
+a:link {
+    color: #ffa949;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:hover {
+    color: forestgreen;
+}
+
+a:active {
+    color: lightcoral;
+}
+
+a:focus {
+    color: white;
+    background-color: #ffa949; 
 }
