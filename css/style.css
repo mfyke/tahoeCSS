@@ -28,6 +28,7 @@ body {
                  0 5px 10px rgba(0,0,0,.25),
                  0 10px 10px rgba(0,0,0,.2),
                  0 20px 20px rgba(0,0,0,.15);
+    margin: 12px 0 0;
   }
   
   h2 {
@@ -84,15 +85,20 @@ body {
     background-color: #ffa949;
     padding-top: 170px;
     height: 850px;
-    background: #ffa949 url("../img/mountains.jpg") no-repeat center;
+    background: linear-gradient(#ffa949, transparent 90%),
+                linear-gradient(0deg, #fff, transparent 90%),
+              #ffa949 url("../img/mountains.jpg") no-repeat center;
     background-size: cover;
 
-  
   }
   
   .title {
     color: white;
     font-size: 1.625rem; /* 26px/16px */
+    letter-spacing: .065em;
+    font-weight: 200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
   }
   
   .intro {
@@ -159,6 +165,7 @@ body {
 
   .arrow {
       width: 50px;
+      margin-top: 150px;
   }
   
   /* Floated Columns */
@@ -179,6 +186,52 @@ body {
     content: "";
     display: table;
     clear: both;
+  }
+
+  /* Media Queries -------------------- */
+
+  @media (max-width: 1024px) {
+    .primary-content, .secondary-content {
+      width: 90%;
+    }
+    .wildlife {
+      padding: 10% 12%;
+      margin: 50px 0 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .primary-content,
+    .secondary-content {
+      width: 100%;
+      padding: 20px;
+      border-top: none;
+    }
+    .main-header{
+      max-height: 380px;
+      padding: 50px 25px 0;
+    }
+    .title {
+      font-size: 1.3rem;
+      border: none;
+    }
+    h1 {
+      font-size: 5rem;
+      line-height: 1.1;
+    }
+    .arrow{
+      display: none;
+    }
+    .intro {
+      font-size: 1rem;
+    }
+    .resorts,.tips {
+      float: none;
+      width: 100%;
+    }
+    .main-footer {
+      padding: 20px 0px;
+    }
   }
 
   
